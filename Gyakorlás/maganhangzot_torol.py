@@ -1,0 +1,12 @@
+def maganhangzot_torol(szöveg):
+    szöveg=szöveg.replace("e", "")
+    szöveg=szöveg.replace("a", "")
+    szöveg=szöveg.replace("o", "")
+    szöveg=szöveg.replace("u", "")
+    szöveg=szöveg.replace("E", "")
+    szöveg=szöveg.replace("A", "")
+    szöveg=szöveg.replace("O", "")
+    szöveg=szöveg.replace("U", "")
+    print(szöveg)
+szöveg=str(input('Kérem a szöveget: '))
+maganhangzot_torol(szöveg)

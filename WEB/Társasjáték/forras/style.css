@@ -1,0 +1,29 @@
+html,
+body {
+  font-size: calc(18px + 8 * (100vw - 768px) / (1440 - 768));
+}
+h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: calc(24px + 12 * (100vw - 768px) / (1440 - 768));
+  text-align: center;
+  font-weight: 300;
+}
+
+a{
+  color:yellow;
+  text-decoration: none;
+}
+
+a:hover{
+  color: orange;
+}
+
+p{
+  text-align: center;
+}
+
+footer{
+  background-color: rgb(128,128,10);
+  border: 2px solid rgb(100,100,10);
+  border-radius: 10px;
+}
