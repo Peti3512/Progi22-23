@@ -19,7 +19,7 @@ class Repülők:
 repülők:list[Repülők]=[]
 
 file=open("utasszallitok.txt", "r")
-file.readline()
+readlinefile=file.readline()
 for sor in file:
     repülők.append(Repülők(sor))
 file.close
@@ -81,3 +81,27 @@ if p==False:
 print(f"7. feladat:")
 for i in x:
     print(f"\t{i}: {x[i]} db")
+
+file=open("utaszsallitok_new.txt", "w", encoding="UTF-8")
+file.write(readlinefile)
+for i in repülők:
+    file.write(f"{i.típus};{i.év};")
+    if "-" in i.utas:
+        r=i.utas
+        u=r.split("-")
+        file.write(f"{u[1]};")
+    else:
+        file.write(f"{i.utas};")
+    if "-" in i.személyzet:
+        r=i.személyzet
+        u=r.split("-")
+        file.write(f"{u[1]};")
+    else:
+        file.write(f"{i.személyzet};")
+    file.write(f";{i.utazósebesség};{int(round(i.felszállótömeg*0.001, 0))};{int(round(i.fesztáv*3.2808, 0))}\n")
+file.close
+
+
+
+
+
